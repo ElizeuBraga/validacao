@@ -16,7 +16,7 @@
 						</div>
 					</div>
 					<div class="card-body">
-						<form action="/cliente" method="POST">
+						<form action="/novocliente" method="POST">
 							@csrf
 							<div class="form-group">
 								<label for="">Nome</label>

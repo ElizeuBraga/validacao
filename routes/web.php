@@ -9,3 +9,5 @@ use App\Http\Controllers\ClinteController;
 
 Route::get('/','ClienteController@index');
 Route::get('/novocliente','ClienteController@create');
+Route::post('/novocliente','ClienteController@store');
+//Route::get('/cliente','ClienteController@store');

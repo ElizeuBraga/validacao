@@ -8,7 +8,6 @@
 	<style type="text/css">
 		td,th, #tituloCard{
 			text-align: center;
-			text-decoration: line-through;
 		}
 	</style>
 </head>
@@ -33,7 +32,7 @@
 									<th>Endereço</th>
 								</tr>
 							</thead>
-							<tbody class="">
+							<tbody>
 								@foreach($clientes as $c)
 									<tr>
 										<td>{{$c->id}}</td>
@@ -46,6 +45,7 @@
 							</tbody>
 						</table>
 					</div>
+					<a class="btn btn-primary" href="/novocliente">Novo cliente</a>
 				</div>
 			</div>
 		</div>
