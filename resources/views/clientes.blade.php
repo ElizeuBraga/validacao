@@ -51,5 +51,6 @@
 		</div>
 	</main>
 	<script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+	{{var-dump(errors)}}
 </body>
 </html>
