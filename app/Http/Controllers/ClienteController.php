@@ -36,10 +36,22 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        /**$request->validate([
             'nome' => 'required|min:5|max:10',
             'email' => 'required|email|unique:clientes'
-        ]);
+        ],$mensagens);*/
+
+        $regras = [
+            'nome' => 'required|min:5|max:10',
+            'email' => 'required|email|unique:clientes'
+        ];
+
+        $mensagens = [
+            'nome.required' => 'O nome é requerido',
+            'email.unique' => 'Este email já existe na nossa base de dados'
+        ];
+
+        $request->validate($regras, $mensagens);
 
         $cliente = new Cliente();
         $cliente->nome      = $request->input('nome');
