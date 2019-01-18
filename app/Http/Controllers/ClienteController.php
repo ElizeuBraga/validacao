@@ -42,14 +42,17 @@ class ClienteController extends Controller
         ],$mensagens);*/
 
         $regras = [
-            'nome' => 'required|min:5|max:10',
-            'email' => 'required|email|unique:clientes'
+            'email' => 'required|email|unique:clientes',
+            'nome' => 'required',
+            'idade' => 'required',
+            'endereco' => 'required'
         ];
 
         $mensagens = [
             //'nome.required' => 'O nome é requerido',
             'required' => 'O atributo :attribute é requerido',
-            'email.unique' => 'Este email já existe na nossa base de dados'
+            'email.unique' => 'Este email já existe na nossa base de dados',
+            'idade.min' => 'A idade mínima de 18 anos'
         ];
 
         $request->validate($regras, $mensagens);

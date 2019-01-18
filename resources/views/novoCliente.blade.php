@@ -22,12 +22,13 @@
 								<label for="">Nome</label>
 								<input type="text" name="nome" id="nome" class="form-control {{$errors->has('nome') ? 'is-invalid' : ''}}" placeholder="Nome do cliente">
 
+								
 								@if($errors -> has('nome'))
 								<div class="invalid-feedback">
 									{{$errors -> first('nome')}}
 								</div>
 								@endif
-
+								
 
 								<!--Essa é uma opção de mensagens de validação ("Adicionando dentro do input a class 'is-invalid'")-->
 								<!--#########################################-->
@@ -43,13 +44,31 @@
 								-->
 
 								<label for="">Idade</label>
-								<input type="number" name="idade" id="idade" class="form-control" placeholder="Idade do cliente">
+								<input type="number" name="idade" id="idade" class="form-control {{$errors->has('idade') ? 'is-invalid' : ''}}" placeholder="Idade do cliente">
+
+								@if($errors -> has('idade'))
+								<div class="invalid-feedback">
+									{{$errors -> first('idade')}}
+								</div>
+								@endif
 
 								<label for="">Endereco</label>
-								<input type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço do cliente">
+								<input type="text" name="endereco" id="endereco" class="form-control {{$errors->has('endereco') ? 'is-invalid' : ''}}" placeholder="Endereço do cliente">
+
+								@if($errors -> has('endereco'))
+								<div class="invalid-feedback">
+									{{$errors -> first('endereco')}}
+								</div>
+								@endif
 
 								<label for="">Email</label>
-								<input type="text" name="email" id="email" class="form-control" placeholder="Email do cliente">
+								<input type="text" name="email" id="email" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" placeholder="Email do cliente">
+
+								@if($errors -> has('email'))
+								<div class="invalid-feedback">
+									{{$errors -> first('email')}}
+								</div>
+								@endif
 							</div>
 							<button class="btn btn-success" type="submit">Salvar</button>
 							<button class="btn btn-danger" type="cancel">Cancelar</button>
