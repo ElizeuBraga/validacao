@@ -35,6 +35,15 @@
 							<button class="btn btn-danger" type="cancel">Cancelar</button>
 						</form>
 					</div>
+					@if($errors->any())
+					<div class="card-footer">
+						@foreach($errors->all() as $e)
+						<div class="alert alert-danger" role="alert">
+							{{$error}}
+						</div>
+						@endforeach
+					</div>
+					@endif
 				</div>
 			</div>
 		</div>
