@@ -47,8 +47,8 @@ class ClienteController extends Controller
         ];
 
         $mensagens = [
-            'nome.required' => 'O nome é requerido',
-            'required' => 'O atributo :atribute é requerido',
+            //'nome.required' => 'O nome é requerido',
+            'required' => 'O atributo :attribute é requerido',
             'email.unique' => 'Este email já existe na nossa base de dados'
         ];
 
